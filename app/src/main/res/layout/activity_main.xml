@@ -73,12 +73,14 @@
                 android:textSize="18sp"/>
 
             <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </Spinner>
 
             <ImageView
+                android:id="@+id/goodsImageView"
                 android:layout_width="160dp"
                 android:layout_height="100dp"
                 android:src="@drawable/guitar"
@@ -134,11 +136,12 @@
                         android:layout_marginEnd="60dp"/>
 
                     <Button
-                        android:id="@+id/btn_plus"
+                        android:id="@+id/btn_minus"
                         android:layout_width="60dp"
                         android:layout_height="50dp"
                         android:layout_below="@+id/quantity"
-                        android:text="+"
+                        android:text="-"
+                        android:onClick="decreasNumber"
                         android:textColor="#fff"
                         android:textSize="22sp"
                         android:background="#733101"
@@ -149,25 +152,36 @@
                         android:layout_width="60dp"
                         android:layout_height="50dp"
                         android:layout_below="@+id/quantity"
-                        android:layout_toRightOf="@+id/btn_plus"
+                        android:layout_toRightOf="@+id/btn_minus"
                         android:text="0"
                         android:gravity="center"
                         android:textColor="#000"
                         android:textSize="22sp" />
 
                     <Button
-                        android:id="@+id/btn_minus"
+                        android:id="@+id/btn_plus"
                         android:layout_width="60dp"
                         android:layout_height="50dp"
                         android:layout_below="@+id/quantity"
                         android:layout_toRightOf="@+id/quantity_count"
                         android:text="+"
+                        android:onClick="increasNumber"
                         android:textColor="#fff"
                         android:textSize="22sp"
                         android:background="#733101"/>
                 </RelativeLayout>
 
             </RelativeLayout>
+            <Button
+                android:id="@+id/card_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add To Card"
+                android:onClick="setText"
+                android:background="@color/color_primary"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/white"/>
+
         </LinearLayout>
 
 </LinearLayout>
